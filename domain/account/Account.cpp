@@ -2,7 +2,7 @@
 #include <iostream>
 #include <utility>
 
-namespace domain
+namespace account
 {
     Account::Account(std::string name, std::string cardNumber, std::string fingerprint, const int pin,
                      const double balance) :

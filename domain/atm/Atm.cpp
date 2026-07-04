@@ -1,8 +1,8 @@
 #include "Atm.h"
 
-namespace domain
+namespace atm
 {
-    Atm::Atm(std::vector<Account> accounts) : accounts_(std::move(accounts))
+    Atm::Atm(std::vector<account::Account> accounts) : accounts_(std::move(accounts))
     {
     }
 

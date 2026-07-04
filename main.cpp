@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "domain/Account.h"
+#include "domain/account/Account.h"
 
 int main()
 {

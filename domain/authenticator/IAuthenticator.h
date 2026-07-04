@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../Account.h"
+#include "../account/Account.h"
 
 namespace authenticator
 {

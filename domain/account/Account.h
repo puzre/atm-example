@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 
-namespace domain
+namespace account
 {
     class Account
     {
