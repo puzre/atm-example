@@ -3,7 +3,7 @@
 #include <iostream>
 #include <ostream>
 
-namespace auth
+namespace authenticator
 {
     void FingerprintAuth::authenticateAccount(domain::Account& account)
     {

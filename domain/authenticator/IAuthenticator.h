@@ -1,12 +1,13 @@
 #pragma once
+
 #include "../Account.h"
 
-namespace auth
+namespace authenticator
 {
-    class IAuth
+    class IAuthenticator
     {
     public:
-        virtual ~IAuth() = default;
+        virtual ~IAuthenticator() = default;
         virtual void authenticateAccount(domain::Account& account) = 0;
     };
 }

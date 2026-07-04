@@ -1,9 +1,10 @@
 #pragma once
-#include "IAuth.h"
 
-namespace auth
+#include "IAuthenticator.h"
+
+namespace authenticator
 {
-    class FingerprintAuth : public IAuth
+    class FingerprintAuth : public IAuthenticator
     {
     public:
         void authenticateAccount(domain::Account& account) override;

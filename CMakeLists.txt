@@ -8,9 +8,9 @@ add_executable(atm_example main.cpp
         domain/Account.h
         domain/Atm.cpp
         domain/Atm.h
-        domain/auth/IAuth.h
-        domain/auth/FingerprintAuth.cpp
-        domain/auth/FingerprintAuth.h
-        domain/auth/PinAuth.cpp
-        domain/auth/PinAuth.h
+        domain/authenticator/IAuthenticator.h
+        domain/authenticator/FingerprintAuth.cpp
+        domain/authenticator/FingerprintAuth.h
+        domain/authenticator/PinAuth.cpp
+        domain/authenticator/PinAuth.h
 )

@@ -3,7 +3,7 @@
 #include <vector>
 
 #include "Account.h"
-#include "auth/IAuth.h"
+#include "authenticator/IAuthenticator.h"
 
 namespace domain
 {
@@ -14,6 +14,6 @@ namespace domain
 
     public:
         explicit Atm(std::vector<Account> accounts);
-        void authenticateAccount(const auth::IAuth& authenticator, const std::string& cardNumber);
+        void authenticateAccount(const authenticator::IAuthenticator& iAuthenticator, const std::string& cardNumber);
     };
 }

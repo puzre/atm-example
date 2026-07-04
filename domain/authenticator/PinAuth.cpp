@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-namespace auth
+namespace authenticator
 {
     void PinAuth::authenticateAccount(domain::Account& account)
     {

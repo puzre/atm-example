@@ -6,7 +6,7 @@ namespace domain
     {
     }
 
-    void Atm::authenticateAccount(const auth::IAuth& authenticator, const std::string& cardNumber)
+    void Atm::authenticateAccount(const authenticator::IAuthenticator& iAuthenticator, const std::string& cardNumber)
     {
     }
 }
