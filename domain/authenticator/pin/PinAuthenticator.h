@@ -1,10 +1,10 @@
 #pragma once
 
-#include "IAuthenticator.h"
+#include "../IAuthenticator.h"
 
-namespace authenticator
+namespace pin
 {
-    class PinAuth : public IAuthenticator
+    class PinAuthenticator : public authenticator::IAuthenticator
     {
     public:
         void authenticateAccount(domain::Account& account) override;
