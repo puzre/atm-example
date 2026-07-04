@@ -1,12 +1,28 @@
 #include "FingerprintAuthenticator.h"
 
+#include <format>
 #include <iostream>
 #include <ostream>
 
-namespace pin
+#include "exception/InvalidFingerprintException.h"
+#include "exception/WrongFingerprintException.h"
+
+namespace fingerprint
 {
-    void FingerprintAuthenticator::authenticateAccount(domain::Account& account)
+    void FingerprintAuthenticator::authenticateAccount(account::Account& account)
     {
-        std::cout << "authenticating using fingerprint..." << std::endl;
+        std::string fingerprint;
+
+        std::cout << "-- [fingerprint authentication] --" << std::endl;
+        std::cout << "enter your fingerprint:" << std::endl;
+        std::getline(std::cin, fingerprint);
+
+        if (fingerprint.empty())
+            throw exception::InvalidFingerprintException("invalid fingerprint");
+
+        if (fingerprint == account.getFingerprint())
+            std::cout << std::format("welcome back {}", account.getName());
+        else
+            throw exception::WrongFingerprintException("wrong fingerprint");
     }
 }

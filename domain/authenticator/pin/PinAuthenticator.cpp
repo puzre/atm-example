@@ -4,7 +4,7 @@
 
 namespace pin
 {
-    void PinAuthenticator::authenticateAccount(domain::Account& account)
+    void PinAuthenticator::authenticateAccount(account::Account& account)
     {
         std::cout << "authenticating using pin..." << std::endl;
     }

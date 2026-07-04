@@ -7,6 +7,6 @@ namespace pin
     class PinAuthenticator : public authenticator::IAuthenticator
     {
     public:
-        void authenticateAccount(domain::Account& account) override;
+        void authenticateAccount(account::Account& account) override;
     };
 }

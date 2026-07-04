@@ -8,6 +8,6 @@ namespace authenticator
     {
     public:
         virtual ~IAuthenticator() = default;
-        virtual void authenticateAccount(domain::Account& account) = 0;
+        virtual void authenticateAccount(account::Account& account) = 0;
     };
 }
