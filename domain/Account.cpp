@@ -4,8 +4,10 @@
 
 namespace domain
 {
-    Account::Account(std::string name, std::string fingerprint, const int pin, const double balance) :
+    Account::Account(std::string name, std::string cardNumber, std::string fingerprint, const int pin,
+                     const double balance) :
         name_(std::move(name)),
+        cardNumber_(std::move(cardNumber)),
         fingerprint_(std::move(fingerprint)), pin_(pin), balance_(balance)
     {
     }
@@ -13,6 +15,11 @@ namespace domain
     std::string Account::getName() const
     {
         return this->name_;
+    }
+
+    std::string Account::getCardNumber() const
+    {
+        return this->cardNumber_;
     }
 
     std::string Account::getFingerprint() const
@@ -42,7 +49,8 @@ namespace domain
 
     std::ostream& operator<<(std::ostream& os, const Account& account)
     {
-        os << "Account { name = " << account.getName() << ", fingerprint = " << account.getFingerprint() <<
+        os << "Account { name = " << account.getName() << ", cardNumber = " << account.getCardNumber() <<
+            ", fingerprint = " << account.getFingerprint() <<
             ", balance = " << account.getBalance() << " }";
         return os;
     }

@@ -14,7 +14,6 @@ namespace domain
 
     public:
         explicit Atm(std::vector<Account> accounts);
-        void addAccount(const Account& account);
-        void authenticateAccount(const auth::IAuth& authenticator, const Account& account);
+        void authenticateAccount(const auth::IAuth& authenticator, const std::string& cardNumber);
     };
 }

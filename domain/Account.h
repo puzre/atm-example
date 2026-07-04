@@ -6,13 +6,15 @@ namespace domain
     class Account
     {
         std::string name_;
+        std::string cardNumber_;
         std::string fingerprint_;
         int pin_;
         double balance_ = 0;
 
     public:
-        Account(std::string  name, std::string  fingerprint, int pin, double balance);
+        Account(std::string name, std::string cardNumber, std::string fingerprint, int pin, double balance);
         [[nodiscard]] std::string getName() const;
+        [[nodiscard]] std::string getCardNumber() const;
         [[nodiscard]] std::string getFingerprint() const;
         [[nodiscard]] int getPin() const;
         [[nodiscard]] double getBalance() const;
