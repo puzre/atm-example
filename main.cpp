@@ -3,6 +3,7 @@
 #include "domain/account/Account.h"
 #include "domain/atm/Atm.h"
 #include "domain/authenticator/fingerprint/FingerprintAuthenticator.h"
+#include "domain/authenticator/pin/PinAuthenticator.h"
 
 int main()
 {
@@ -15,6 +16,9 @@ int main()
     atm::Atm atm = atm::Atm(atmAccounts);
 
     fingerprint::FingerprintAuthenticator fingerprintAuthenticator = fingerprint::FingerprintAuthenticator();
+    pin::PinAuthenticator pinAuthenticator = pin::PinAuthenticator();
 
-    atm.authenticateAccount(fingerprintAuthenticator, "4444");
+    atm.authenticateAccount(pinAuthenticator, "4444");
+
+    atm.showSignedAccount();
 }

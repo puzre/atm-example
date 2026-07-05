@@ -21,7 +21,7 @@ namespace fingerprint
             throw exception::InvalidFingerprintException("invalid fingerprint");
 
         if (fingerprint == account.getFingerprint())
-            std::cout << std::format("welcome back {}", account.getName());
+            std::cout << std::format("welcome back {} \n", account.getName());
         else
             throw exception::WrongFingerprintException("wrong fingerprint");
     }

@@ -16,4 +16,6 @@ add_executable(atm_example main.cpp
         domain/authenticator/fingerprint/exception/WrongFingerprintException.h
         domain/authenticator/fingerprint/exception/InvalidFingerprintException.h
         domain/atm/exception/AccountNotFoundException.h
+        domain/authenticator/pin/exception/InvalidPinException.h
+        domain/authenticator/pin/exception/WrongPinException.h
 )
